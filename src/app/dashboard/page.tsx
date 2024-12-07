@@ -17,9 +17,11 @@ export default function Home() {
       <main className="flex flex-col min-h-screen gap-6 max-w-5xl mx-auto my-12">
         <div className="flex justify-between items-end">
           <h1 className="text-4xl font-semibold top-py">Dashboard</h1>
-          <Button variant="ghost" className={"flex gap-3 items-center"}>
-            Create Invoice
-            <CirclePlus className="w-8 h-8"/>
+          <Button variant="ghost" className={"flex gap-3 items-center"} asChild>
+            <Link href="/invoices/new">
+              Create Invoice
+              <CirclePlus className="w-8 h-8"/>
+            </Link>
           </Button>
         </div>
         <Table>
